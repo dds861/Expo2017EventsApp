@@ -114,8 +114,10 @@ public class MainActivity extends AppCompatActivity
         }
         //Выбираю в 4 пункт в меню "По дате открытия"
         else if (id == R.id.menu4) {
+
             //в Intent обозначаю какой Класс надо открыть
             intent = new Intent(getApplicationContext(), Date_Cards.class);
+
             //запускаю Интент и открывает новое Активити
             startActivity(intent);
 
@@ -128,7 +130,6 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_send) {
 
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

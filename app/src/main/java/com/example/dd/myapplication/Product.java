@@ -9,10 +9,9 @@ public class Product {
 
     String text1;
     String text2;
-
-
     String text3;
     int image;
+
     public String getText3() {
         return text3;
     }

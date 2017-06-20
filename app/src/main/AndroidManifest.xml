@@ -31,7 +31,9 @@
         <activity
             android:name=".Place_ListItems"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Date_Cards"></activity>
+        <activity
+            android:name=".Date_Cards"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

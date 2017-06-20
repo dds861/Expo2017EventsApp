@@ -1,11 +1,9 @@
 package com.example.dd.myapplication;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +14,7 @@ public class Date_Cards extends AppCompatActivity {
     RecyclerView recyclerView;
 
     //Создаем Адаптер для recyclerView
-    MyAdapter myAdapter;
+    MyAdapter_Menu4 myAdapter;
 
     //Создаем список
     List<Product> productList = new ArrayList<>();
@@ -38,22 +36,21 @@ public class Date_Cards extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_date_cards);
+        setContentView(R.layout.cards);
 
         //Находим recyclerView
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewList);
 
-        //Создаем и инициализируем recyclerview
+        //Создаем и инициализируем LinearLayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
         //Для recyclerView устанавливаем LayoutManager
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        //Вызываем данный метод для добавления данных в массив 
-        setInitialData1();
+
 
         //инициализируем адаптер для recyclerView
-        myAdapter = new MyAdapter(this, productList);
+        myAdapter = new MyAdapter_Menu4(this, productList, R.layout.menu4_date_cards);
 
         //устанавливаем для recycleview адаптер
         recyclerView.setAdapter(myAdapter);
@@ -64,6 +61,9 @@ public class Date_Cards extends AppCompatActivity {
         arrayDates = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.arrayDates)));
         arrayName = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.arrayName)));
         arrayPlace = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.arrayPlace)));
+
+        //Вызываем данный метод для добавления данных в массив
+        setInitialData1();
     }
 
     private void setInitialData1() {

@@ -11,17 +11,17 @@
         android:id="@+id/cv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="8dp"
+        app:cardElevation="2dp"
 
         app:cardUseCompatPadding="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="80dp"
             android:background="@color/backgroundCardView">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/menu4_iv"
                 android:layout_width="72dp"
 
                 android:layout_height="72dp"
@@ -32,10 +32,11 @@
                 android:scaleType="fitCenter" />
 
             <TextView
-                android:id="@+id/tv_eventPlaceItems"
+                android:id="@+id/menu4_tv_eventPlaceItems"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/imageView"
+                android:layout_alignParentRight="true"
+
                 android:maxLines="2"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
@@ -44,11 +45,10 @@
                 tools:text="Isla de muertaа" />
 
             <TextView
-                android:id="@+id/tv_dateItems"
+                android:id="@+id/menu4_tv_detailed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_eventPlaceItems"
-                android:layout_toRightOf="@+id/imageView"
+                android:layout_toRightOf="@id/menu4_iv"
                 android:maxLines="1"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
@@ -57,15 +57,17 @@
                 tools:text="Isla de muertaа" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/menu4_tv_dateItems"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_dateItems"
-                android:layout_toRightOf="@+id/imageView"
+                android:layout_below="@+id/menu4_tv_detailed"
+                android:layout_toRightOf="@id/menu4_iv"
                 android:maxLines="3"
-                android:padding="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#666"
-                android:textSize="18dp"
                 tools:text="Particles meet with starlight travelа" />
 
         </RelativeLayout>
