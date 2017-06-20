@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/backgroundCardView">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="72dp"
+
+                android:layout_height="72dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tv_eventPlaceItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imageView"
+                android:maxLines="2"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#222"
+                tools:text="Isla de muertaа" />
+
+            <TextView
+                android:id="@+id/tv_dateItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_eventPlaceItems"
+                android:layout_toRightOf="@+id/imageView"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#222"
+                tools:text="Isla de muertaа" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dateItems"
+                android:layout_toRightOf="@+id/imageView"
+                android:maxLines="3"
+                android:padding="8dp"
+                android:textColor="#666"
+                android:textSize="18dp"
+                tools:text="Particles meet with starlight travelа" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
